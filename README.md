@@ -23,7 +23,9 @@ nc -lvnp 9001
 
 Step 2) In terminal 2, Launch the ldap listener jumper:  
 **Note:** Must download jdk-8u202-linux-x64.tar.gz and extract to jdk1.8.0_202  
-I have saved it to my personal dropbox here www dot dropbox dot com/   s/7c1d5y6naqcrdyh/jdk-8u202-linux-x64.tar.gz?dl=0  
+
+--> I have saved it to my personal dropbox here www dot dropbox dot com/   s/7c1d5y6naqcrdyh/jdk-8u202-linux-x64.tar.gz?dl=0  
+
 Now run it like this:
 
 ```bash
@@ -73,6 +75,7 @@ Once it is running, you can access it on localhost:8080
 
 Getting the Java version.
 --------------------------------------
+--> I have saved it to my personal dropbox here www dot dropbox dot com/   s/7c1d5y6naqcrdyh/jdk-8u202-linux-x64.tar.gz?dl=0  
 
 At the time of creating the exploit we were unsure of exactly which versions of java work and which don't so chose to work with one of the earliest versions of java 8: `java-8u20`.
 
