@@ -77,19 +77,14 @@ Getting the Java version.
 --------------------------------------
 --> I have saved it to my personal dropbox here www dot dropbox dot com/   s/7c1d5y6naqcrdyh/jdk-8u202-linux-x64.tar.gz?dl=0  
 
-At the time of creating the exploit we were unsure of exactly which versions of java work and which don't so chose to work with one of the earliest versions of java 8: `java-8u20`.
+Kozmer did it with java-8u20 but Oracle seems to have scrubbed this off their download page, but they still had java-8u202 and that seemed fine. I updated the python script to use that path in a few place, and voila. If you can't get it from my dropbox, Oracle thankfully provides an archive for all previous java versions:  
+[https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html).  
+Scroll down to `8u20` and download the tar.gz for amd64, and tar -xvfz in your log4j-shell-poc folder.
 
-Oracle thankfully provides an archive for all previous java versions:<br>
-[https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html).<br>
-Scroll down to `8u20` and download the appropriate files for your operating system and hardware.
-![Screenshot from 2021-12-11 00-09-25](https://user-images.githubusercontent.com/46561460/145655967-b5808b9f-d919-476f-9cbc-ed9eaff51585.png)
-
-**Note:** You do need to make an account to be able to download the package.
-
+**Note:** Oracle makes you  make an account to be able to download the package :-)  
 
 Disclaimer
 ----------
 This repository is not intended to be a one-click exploit to CVE-2021-44228. The purpose of this project is to help people learn about this awesome vulnerability, and perhaps test their own applications (however there are better applications for this purpose, ei: [https://log4shell.tools/](https://log4shell.tools/)).
 
-Our team will not aid, or endorse any use of this exploit for malicious activity, thus if you ask for help you may be required to provide us with proof that you either own the target service or you have permissions to pentest on it.
-
+Our team will not aid, or endorse any use of this exploit for malicious activity, thus if you ask for help you may be required to provide us with proof that you either own the target service or you have permissions to pentest on it.  
