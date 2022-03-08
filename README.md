@@ -1,6 +1,9 @@
 # log4j-shell-poc
 
 Cribbed from the great https://github.com/kozmer/log4j-shell-poc !!  
+
+![image](https://user-images.githubusercontent.com/4404271/157152474-b3696c41-473e-47b3-9cb8-2b949cecb382.png)
+
 ![log4j-shell-poc](https://user-images.githubusercontent.com/4404271/157141049-9ce9dc50-5d8e-4794-84ca-7148825401e4.gif)
 
 
